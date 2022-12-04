@@ -1,5 +1,5 @@
-const pool = require("./backend/pool");
-const controller = require("./backend/controller");
+const pool = require("./pool");
+const controller = require("./controller");
 const express = require("express");
 const app = express();
 const cors = require("cors");
