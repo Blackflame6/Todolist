@@ -1,0 +1,98 @@
+.form {
+  width: 50rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.card {
+  max-width: 45rem;
+  margin: auto;
+  background-color: #eee;
+  border-radius: 2rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.card-header {
+  border-radius: 5rem;
+  font-weight: 700;
+}
+.buttons {
+  margin-bottom: 1rem;
+}
+
+.submit {
+  margin-left: 3rem;
+  border-radius: 3rem;
+  background-color: #333;
+  color: #eee;
+}
+
+.header-note {
+  font-weight: 100;
+}
+
+body {
+  background-color: rgb(198, 210, 218);
+}
+.main-input {
+  border-radius: 5rem;
+  margin-left: 0rem;
+  width: 40rem;
+}
+
+.btn-warning {
+  border-radius: 1rem;
+}
+
+.card:hover {
+  background-color: #fff;
+  box-shadow: 0 0 20px 1px #555;
+}
+
+.btn-back {
+  background-color: #eee;
+}
+.hide {
+  margin-right: 3rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  margin-left: 3rem;
+  border-radius: 3rem;
+  background-color: #333;
+  color: #eee;
+  padding: 0rem 1.5rem;
+}
+
+input::placeholder {
+  text-align: center;
+}
+.card-text {
+  font-weight: 300;
+}
+
+.modal-box {
+  background-color: rgb(198, 210, 218);
+}
+
+textarea {
+  background-color: #eee;
+}
+
+.navbar {
+  padding: 1rem;
+  background-color: rgb(134, 51, 163);
+  display: flex;
+
+  padding-left: 5rem;
+  padding-right: 5rem;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+
+  font-size: 0.5rem;
+
+  font-weight: 200;
+  color: #eee;
+}
