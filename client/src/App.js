@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./App.css";
+import Register from "./Register";
 import Input from "./components/input";
 import ShowTodo from "./components/showtodo";
 import OneTodo from "./components/onetodo";
@@ -34,6 +35,11 @@ function App() {
 
       />
     </>
+  // <main>
+  //   <Register className="App" />
+
+  // </main>
+   
   );
  } else {
   return (
