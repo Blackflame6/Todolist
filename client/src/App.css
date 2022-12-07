@@ -97,7 +97,7 @@ a {
   color: #eee;
 }
 
-/* 
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 * {
@@ -115,6 +115,10 @@ html {
 body {
     min-height: 100vh;
     background-color: dodgerblue;
+}
+section {
+  margin: auto;
+width: 100rem;
 }
 
 .App {
@@ -211,4 +215,4 @@ button {
 
 .line {
     display: inline-block;
-} */
+}
