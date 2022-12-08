@@ -47,6 +47,18 @@ const Register = () => {
     setErrMsg("");
   }, [user, pwd, matchPwd]);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const v1 = USER_REGEX.test(user);
+    const v2 = PWD_REGEX.test(pwd);
+    if (!v1 || !v2) {
+      setErrMsg("Invalid Entry");
+      return;
+    }
+    console.log(user, pwd)
+    setSuccess(true)
+  };
+
   return (
     <section>
       <p
@@ -57,7 +69,7 @@ const Register = () => {
         {errMsg}
       </p>
       <h1>Register</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="username">
           Username:
           <span className={validName ? "valid" : "hide"}>
@@ -135,34 +147,39 @@ const Register = () => {
           <span className={validMatch && matchPwd ? "valid" : "hide"}>
             <FaCheck />
           </span>
-
           <span className={validMatch || !matchPwd ? "hide" : "invalid"}>
             <FaTimes />
           </span>
         </label>
 
-      <input type="password"
-      id="confirm_pwd"
-      onChange={(e) => setMatchPwd(e.target.value)}
-      required
-      aria-invalid={validPwd ? "false" : "true"}
-      aria-describedby="confirmnote"
-      onFocus={() => setMatchFocus(true)}
-      onBlur={() => setMatchFocus(false)} 
-      />
-      <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}> 
-      <FaInfoCircle />
-      Must match the first password input field
-      </p>
-      <button disabled={!validName || !validPwd || !validMatch ? true : false} >Sign Up</button>
-
+        <input
+          type="password"
+          id="confirm_pwd"
+          onChange={(e) => setMatchPwd(e.target.value)}
+          required
+          aria-invalid={validPwd ? "false" : "true"}
+          aria-describedby="confirmnote"
+          onFocus={() => setMatchFocus(true)}
+          onBlur={() => setMatchFocus(false)}
+        />
+        <p
+          id="confirmnote"
+          className={matchFocus && !validMatch ? "instructions" : "offscreen"}
+        >
+          <FaInfoCircle />
+          Must match the first password input field
+        </p>
+        <button
+          disabled={!validName || !validPwd || !validMatch ? true : false}
+        >
+          Sign Up
+        </button>
       </form>
       <p>
         Already registered? <br />
         <span className="line">
           <a href="#">Sign in</a>
         </span>
-
       </p>
     </section>
   );
