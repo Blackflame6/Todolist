@@ -141,7 +141,19 @@ const Register = () => {
           </span>
         </label>
 
-      <input type="" />
+      <input type="password"
+      id="confirm_pwd"
+      onChange={(e) => setMatchPwd(e.target.value)}
+      required
+      aria-invalid={validPwd ? "false" : "true"}
+      aria-describedby="confirmnote"
+      onFocus={() => setMatchFocus(true)}
+      onBlur={() => setMatchFocus(false)} 
+      />
+      <p id="confirmnote" className={matchFocus && !validMatch ? "instructions" : "offscreen"}> 
+      <FaInfoCircle />
+      Must match the first password input field
+      </p>
       </form>
     </section>
   );
