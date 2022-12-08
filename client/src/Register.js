@@ -58,13 +58,14 @@ const Register = () => {
       </p>
       <h1>Register</h1>
       <form>
-        <label htmlFor="username">Username:
-        <span className={validName ? "valid" : "hide"}>
-        <FaCheck />
-        </span>
-        <span className={validName || !user ? "hide" : "invalid"}>
-          <FaTimes />
-        </span>
+        <label htmlFor="username">
+          Username:
+          <span className={validName ? "valid" : "hide"}>
+            <FaCheck />
+          </span>
+          <span className={validName || !user ? "hide" : "invalid"}>
+            <FaTimes />
+          </span>
         </label>
         <input
           type="text"
@@ -94,6 +95,53 @@ const Register = () => {
           <br /> Must begin with a letter. <br />
           Letters, numbers, underscores, hyphens allowed.
         </p>
+        <label htmlFor="password">
+          Password:
+          <span className={validPwd ? "valid" : "hide"}>
+            <FaCheck />
+          </span>
+          <span className={validPwd || !pwd ? "hide" : "invalid"}>
+            <FaTimes />
+          </span>
+        </label>
+        <input
+          type="password"
+          id="password"
+          onChange={(e) => setPwd(e.target.value)}
+          required
+          aria-invalid={validPwd ? "false" : "true"}
+          aria-describedby="pwdnote"
+          onFocus={() => setPwdFocus(true)}
+          onBlur={() => setPwdFocus(false)}
+        />
+        <p
+          id="pwdnote"
+          className={pwdFocus && !validPwd ? "instructions" : "offscreen"}
+        >
+          <FaInfoCircle />
+          8 to 24 characters.
+          <br />
+          Must includee uppercase and lowercase letter, a number and a special
+          character. <br />
+          Allowed special charcters:{" "}
+          <span aria-label="exclamation mark">!</span>
+          <span aria-label="at symbol">@</span>
+          <span aria-label="hashtag">#</span>
+          <span aria-label="dollar sign">$</span>
+          <span aria-label="percent">%</span>
+        </p>
+        <label htmlFor="confirm_pwd">
+          Confirm Password:
+          <span className={validMatch && matchPwd ? "valid" : "hide"}>
+            <FaCheck />
+          </span>
+
+          <span className={validMatch || !matchPwd ? "hide" : "invalid"}>
+            <FaTimes />
+          </span>
+        </label>
+
+      <input type="" />
       </form>
     </section>
   );
