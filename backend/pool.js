@@ -1,4 +1,3 @@
-
 const { Pool } = require("pg");
 
 require("dotenv").config();
@@ -17,12 +16,12 @@ const devConfig = {
   database: process.env.PG_DATABASE,
   port: process.env.PG_PORT,
 };
-
+const connectionString = process.env.DATABASE_URL;
 const proConfig = {
-  connectionString: process.env.DATABASE_URL,
+  connectionString
 };
 const pool = new Pool(
-  process.env.NODE_ENV === "produdction" ? proConfig : devConfig
+  process.env.NODE_ENV === "production" ? proConfig : devConfig
 );
 
 module.exports = pool;
