@@ -10,14 +10,14 @@ app.use(express.json());
 app.use(cors());
 
 
-const connect = () => {
-  try {
-    console.log(`${pool.options.database} is connected`);
-  } catch (err) {
-    console.error(err.message);
-  }
-};
-connect();
+// const connect = () => {
+//   try {
+//     console.log(`${pool.proConfig} is connected`);
+//   } catch (err) {
+//     console.error(err.message);
+//   }
+// };
+// connect();
 
 
 app.get("/fstodos/", controller.getAllTodos);
