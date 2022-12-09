@@ -22,23 +22,23 @@ function App() {
   }
  if(hidetodos == false) {
   return (
-    // <>
-    //   <Input description={description} setDescription={setDescription} hideTheTodos={hideTheTodos}/>
-    //   <ShowTodo
-    //     todos={todos}
-    //     setTodos={setTodos}
-    //     oneTodo={oneTodo}
-    //     setOneTodo={setOneTodo}
-    //     trueOneTodo={trueOneTodo}
-    //     showOne={showOne}
-    //     setShowOne={setShowOne}
+    <>
+      <Input description={description} setDescription={setDescription} hideTheTodos={hideTheTodos}/>
+      <ShowTodo
+        todos={todos}
+        setTodos={setTodos}
+        oneTodo={oneTodo}
+        setOneTodo={setOneTodo}
+        trueOneTodo={trueOneTodo}
+        showOne={showOne}
+        setShowOne={setShowOne}
 
-    //   />
-    // </>
-  <main>
-    <Register className="App" />
+      />
+    </>
+  // <main>
+  //   <Register className="App" />
 
-  </main>
+  // </main>
    
   );
  } else {
