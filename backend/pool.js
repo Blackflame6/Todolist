@@ -2,13 +2,7 @@ const { Pool } = require("pg");
 
 require("dotenv").config();
 
-// const devConfig = {
-//   user: "franklynumeh",
-//   password: "",
-//   host: "localhost",
-//   database: "newfsdb",
-//   port: "5432"
-// };
+
 const devConfig = {
   user: process.env.PG_USER,
   password: process.env.PG_PASSWORD,
