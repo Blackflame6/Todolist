@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 // import axios from "axios"
-import NavBar from "./navbar";
+// import NavBar from "./navbar"; 
 
 const Input = ({ description, setDescription, hideTheTodos }) => {
   const url = "http://localhost:5700/fstodos/";
@@ -27,7 +27,7 @@ const Input = ({ description, setDescription, hideTheTodos }) => {
   }
   return (
     <Fragment>
-       <NavBar />
+       {/* <NavBar /> */}
     <h1 className="header-note text-center my-4">
         React Fullstack MVP Oct. 2022
       </h1>
