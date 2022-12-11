@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 // import NavBar from "./navbar"; 
 
 const Input = ({ description, setDescription, hideTheTodos }) => {
-  const url = "http://localhost:5700/fstodos/";
+  const url = "https://todolist-app-xb56.onrender.com/fstodos/";
 
   const addInput = async () => {
     try {
