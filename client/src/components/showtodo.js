@@ -16,7 +16,8 @@ const ShowTodo = ({
 }) => {
   useEffect(() => {
     const displayTodos = async () => {
-      const url = "http://localhost:5700/fstodos/";
+      // const url = "http://localhost:5700/fstodos/";
+      const url = "https://todolist-app-xb56.onrender.com/fstodos";
       try {
         const res = await fetch(url);
         const data = await res.json();
