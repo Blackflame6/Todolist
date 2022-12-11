@@ -17,7 +17,7 @@ const ShowTodo = ({
   useEffect(() => {
     const displayTodos = async () => {
       // const url = "http://localhost:5700/fstodos/";
-      const url = "https://todolist-app-xb56.onrender.com/fstodos";
+      const url = "https://todolist-app-xb56.onrender.com/fstodos/";
       try {
         const res = await fetch(url);
         const data = await res.json();
@@ -32,7 +32,7 @@ const ShowTodo = ({
 
   const changeOneState = async(id) => {
     try {
-      const res = await fetch (`http://localhost:5700/fstodos/${id}`)
+      const res = await fetch (`https://todolist-app-xb56.onrender.com/fstodos/${id}`)
       trueOneTodo();
       const data = await res.json()
       const getOne = data[0]

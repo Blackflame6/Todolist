@@ -6,7 +6,7 @@ const EditTodo = ({ todo, use }) => {
   const updateTodo = async (id) => {
     const body = { description };
     try {
-      const res = await fetch(`http://localhost:5700/fstodos/${id}`, {
+      const res = await fetch(`https://todolist-app-xb56.onrender.com/fstodos/${id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
