@@ -30,8 +30,10 @@ app.use((req, res, next) => {
 // connect();
 
 const limiter = rateLimit({
-  windowMS: 1000,
-  max: 1,
+  windowMS: 1 * 60 * 1000,
+  max: 10,
+  message: "10 requests per minute, dont be stupid"
+
 })
 app.use(limiter)
 
