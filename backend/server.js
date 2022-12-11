@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 5700;
-
+const rateLimit = require("express-rate-limit")
 
 app.use(express.json());
 app.use(cors());
@@ -29,6 +29,11 @@ app.use((req, res, next) => {
 // };
 // connect();
 
+const limiter = rateLimit({
+  windowMS: 1000,
+  max: 1,
+})
+app.use(limiter)
 
 app.get("/fstodos/", controller.getAllTodos);
 app.get("/fstodos/:id", controller.getOneTodo)
