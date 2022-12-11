@@ -33,6 +33,8 @@
 
 body {
   background-color: rgb(198, 210, 218);
+  /* width: 50rem; */
+  margin: auto;
 }
 .main-input {
   border-radius: 5rem;
@@ -95,6 +97,13 @@ a {
 
   font-weight: 200;
   color: #eee;
+}
+
+@media screen and (min-width: 390px) {
+  body {
+    width: 50rem;
+    margin: auto;
+  }
 }
 
 /* 
