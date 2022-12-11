@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 // import axios from "axios"
 // import NavBar from "./navbar"; 
 
@@ -23,6 +23,7 @@ const Input = ({ description, setDescription, hideTheTodos }) => {
   };
   const handleClick = () => {
     hideTheTodos()
+ 
     
   }
   return (
@@ -31,7 +32,7 @@ const Input = ({ description, setDescription, hideTheTodos }) => {
     <h1 className="header-note text-center my-4">
         React Fullstack MVP Oct. 2022
       </h1>
-      <form className="form d-flex" onSubmit={addInput}>
+      <form className="d-flex" onSubmit={addInput}>
       <button
           className="
       btn btn-primary hide"
@@ -43,6 +44,7 @@ const Input = ({ description, setDescription, hideTheTodos }) => {
         <input
           type="text"
           className="form-control main-input"
+          
           onChange={changeInputValue}
           value={description}
          
