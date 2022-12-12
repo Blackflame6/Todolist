@@ -14,14 +14,7 @@ const HideTodos = () => {
           Show 
         </button>
 
-        <input
-          type="text"
-          className="form-control main-input"
-          placeholder="Click on 'Show Todos' to view your todos"
-          required
-          autoFocus
-          readOnly
-        />
+
 
        
       </form>
