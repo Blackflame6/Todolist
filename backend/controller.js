@@ -24,7 +24,7 @@ const createTodo = async(req, res) => {
   const description = req.body.description;
   try {
     const { rows } = await pool.query(queries.createTodo, [description]);
-    res.status(201).send(`New Todo created: ${description}`);
+    // res.status(201).send(`New Todo created: ${description}`);
   } catch (err) {
     console.log(err.message);
   }

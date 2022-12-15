@@ -40,7 +40,7 @@ app.use(limiter)
 app.get("/fstodos/", controller.getAllTodos);
 app.get("/fstodos/:id", controller.getOneTodo)
 app.post("/fstodos/", controller.createTodo)
-app.patch("/fstodos/:id", controller.updateTodo)
+app.put("/fstodos/:id", controller.updateTodo)
 app.delete("/fstodos/:id", controller.removeTodo)
 
 app.listen(PORT, () => {

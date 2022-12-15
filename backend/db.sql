@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS fstodos
 
 CREATE TABLE fstodos (
   id SERIAL PRIMARY KEY,
-  description VARCHAR(255)
+  description TEXT
 );
 
 INSERT INTO fstodos (description) VALUES ('I need to watch the footbal game');
