@@ -2,25 +2,40 @@ import React, { Fragment, useState } from "react";
 
 const EditTodo = ({ todo, use }) => {
   const [description, setDescription] = useState([todo.description]);
+  const [btnDisabled, setbtnDisabled] = useState(true)
+
+
+
 
   const updateTodo = async (id) => {
+    
     const body = { description };
     try {
       const res = await fetch(`https://todolist-app-xb56.onrender.com/fstodos/${id}`, {
-        method: "PATCH",
+      // const res = await fetch(`http://localhost:5700/fstodos/${id}`, {
+        method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
       window.location = "/";
-      console.log(res);
+      console.log("res");
     } catch (err) {
       console.error(err.message);
     }
+   
   };
 
   const changeTodo = (e) => {
     setDescription(e.target.value);
+    setbtnDisabled(false)
   };
+
+  const checkRequired =()=> {
+ setbtnDisabled(true)
+    console.log(description)
+    }
+   
+
 
   return (
     <>
@@ -29,6 +44,7 @@ const EditTodo = ({ todo, use }) => {
         class="btn btn-primary"
         data-toggle="modal"
         data-target={`#id${todo.id}`}
+        onClick={checkRequired}
       >
         Edit
       </button>
@@ -57,6 +73,7 @@ const EditTodo = ({ todo, use }) => {
               </button>
             </div>
             <textarea
+            required
               modal-box
               name=""
               id=""
@@ -76,6 +93,7 @@ const EditTodo = ({ todo, use }) => {
                 Close
               </button>
               <button
+               disabled={btnDisabled}
                 type="button"
                 class="btn btn-primary"
                 onClick={() => updateTodo(todo.id)}

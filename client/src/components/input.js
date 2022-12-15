@@ -4,6 +4,7 @@ import React, { Fragment, useState } from "react";
 
 const Input = ({ description, setDescription, hideTheTodos }) => {
   const url = "https://todolist-app-xb56.onrender.com/fstodos/";
+  // const url = "http://localhost:5700/fstodos/";
 
   const addInput = async () => {
     try {
@@ -14,6 +15,7 @@ const Input = ({ description, setDescription, hideTheTodos }) => {
         body: JSON.stringify(body),
       });
       console.log(res);
+      console.log("wd");
     } catch (err) {
       console.error(err.message);
     }

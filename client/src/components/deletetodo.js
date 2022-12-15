@@ -3,15 +3,14 @@ import React, { Fragment, useEffect } from "react";
 const DeleteTodo = ({ todo, todos, setTodos }) => {
   const dropTodo = async (id) => {
     await fetch(`https://todolist-app-xb56.onrender.com/fstodos/${id}`, {
+    // await fetch(`http://localhost:5700/fstodos/${id}`, {
       method: "DELETE",
     });
     // setTodos(todos.filter((todo) => todo.id != id));
     window.location = "/"
     
   };
-
-
-
+  
   return (
     //   <button onClick={()=>dropTodo(todo.id)} class="btn btn-danger">
     //   Delete

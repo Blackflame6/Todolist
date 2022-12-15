@@ -33,10 +33,11 @@ const ShowTodo = ({
   const changeOneState = async(id) => {
     try {
       const res = await fetch (`https://todolist-app-xb56.onrender.com/fstodos/${id}`)
+      // const res = await fetch (`http://localhost:5700/fstodos/${id}`)
       trueOneTodo();
       const data = await res.json()
       const getOne = data[0]
-      console.log(getOne)
+      // console.log(getOne)
       setShowOne(getOne)
     } catch (err) {
       console.err(err.message)
